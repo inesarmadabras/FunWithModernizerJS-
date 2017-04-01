@@ -121,6 +121,12 @@ jQuery(document).ready(function($){
 			self.element.addClass('content-loaded');
 		});
 
+		//update event content
+		this.modalBody.find('.author-info').load(event.parent().attr('data-content')+'.html .author-info > *', function(data){
+			//once the event content has been loaded
+			self.element.addClass('content-loaded');
+		});
+
 		this.element.addClass('modal-is-open');
 
 		setTimeout(function(){
