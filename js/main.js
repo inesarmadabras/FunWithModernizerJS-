@@ -120,7 +120,11 @@ jQuery(document).ready(function($){
 			//once the event content has been loaded
 			self.element.addClass('content-loaded');
 		});
-
+		
+		this.modalBody.find('.event-author').load(event.parent().attr('data-content')+'.html .event-author > *', function(data){
+			//once the event content has been loaded
+			self.element.addClass('content-loaded');
+		});
 
 		this.element.addClass('modal-is-open');
 
