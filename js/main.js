@@ -116,13 +116,7 @@ jQuery(document).ready(function($){
 		this.modal.attr('data-event', event.parent().attr('data-event'));
 
 		//update event content
-		this.modalBody.find('.event-info').load(event.parent().attr('data-content')+'.html .event-info > *', function(data){
-			//once the event content has been loaded
-			self.element.addClass('content-loaded');
-		});
-
-		//update event content
-		this.modalBody.find('.author-info').load(event.parent().attr('data-content')+'.html .author-info > *', function(data){
+		this.modalBody.find('.event-info').find('.author-info').load(event.parent().attr('data-content')+'.html .event-info .author-info > *', function(data){
 			//once the event content has been loaded
 			self.element.addClass('content-loaded');
 		});
